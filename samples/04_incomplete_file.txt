@@ -1,0 +1,7 @@
+LOAN FILE 2026-0004 (synthetic data)
+Applicant: Luis Ortega
+Credit Score: 735
+Loan Amount: $250,000
+Term: 15 years
+Documents Provided: pay_stub
+Notes: Income documentation and appraisal not yet received.

@@ -1,0 +1,12 @@
+LOAN FILE 2026-0002 (synthetic data)
+Applicant: Marcus Webb
+Credit Score: 688
+Annual Income: $96,000
+Monthly Debt Payments: $650
+Loan Amount: $342,000
+Property Value: $380,000
+Interest Rate: 6.875%
+Term: 30 years
+Years at Current Employer: 1.5
+Documents Provided: pay_stub, w2, appraisal
+Notes: Recently changed employers within the same industry. Bank statements pending.

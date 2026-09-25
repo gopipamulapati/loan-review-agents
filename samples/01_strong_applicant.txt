@@ -1,0 +1,12 @@
+LOAN FILE 2026-0001 (synthetic data)
+Applicant: Priya Raman
+Credit Score: 782
+Annual Income: $150,000
+Monthly Debt Payments: $400
+Loan Amount: $320,000
+Property Value: $420,000
+Interest Rate: 6.5%
+Term: 30 years
+Years at Current Employer: 6
+Documents Provided: pay_stub, w2, bank_statement, appraisal
+Notes: Salaried software engineer. Down payment from savings, verified by statements.
