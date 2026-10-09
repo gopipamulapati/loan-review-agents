@@ -26,7 +26,7 @@ def template_memo(
     missing: list[str],
 ) -> str:
     lines = [f"## Loan review: {app.applicant_name or 'Unknown applicant'}", ""]
-    lines.append(f"**Recommendation:** {_LABEL[decision]}")
+    lines.append(f"**Recommendation:** {_LABEL[decision]}  ")  # trailing spaces = line break
     if risk:
         lines.append(f"**Risk:** {risk.score}/100 ({risk.band})")
     lines.append("")
