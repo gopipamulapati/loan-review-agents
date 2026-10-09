@@ -17,6 +17,8 @@ It's served through **FastAPI**, packaged with **Docker**, and tested in **GitHu
 It runs fully offline by default, and the model is switched to **OpenAI** or **AWS Bedrock**
 with one environment variable.
 
+![A loan file goes in, an underwriter memo comes out](docs/images/demo.png)
+
 > All loan data in this repo is synthetic, and the thresholds in `config.py` are simplified
 > examples for demonstration. They are not real lending guidelines.
 
@@ -48,17 +50,7 @@ Guardrails built in:
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    A[Loan file text] --> E[Extractor agent<br/>LLM → JSON → Pydantic]
-    E -->|required fields missing| W
-    E -->|complete| P[Policy agent<br/>DTI · LTV · credit · docs]
-    E -->|complete| R[Risk agent<br/>0-100 score + narrative]
-    P --> D{Decide}
-    R --> D
-    D --> W[Writer agent<br/>memo + guardrail]
-    W --> O[ReviewReport JSON]
-```
+![Architecture: extractor, parallel policy and risk agents, decide, writer](docs/images/architecture.png)
 
 The policy and risk agents run as parallel LangGraph branches. The `decide` node waits for
 both. Trace entries from the parallel branches are merged with an `operator.add` state
@@ -137,6 +129,8 @@ curl -X POST localhost:8000/review \
 ```
 
 Interactive docs are at `http://localhost:8000/docs`.
+
+![Interactive API docs (FastAPI / Swagger UI)](docs/images/api-docs.png)
 
 ## Project layout
 
